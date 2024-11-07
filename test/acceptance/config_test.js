@@ -8,12 +8,12 @@ Scenario('change config 1 @WebDriverIO @Puppeteer @Playwright', ({ I }) => {
 
 Scenario('change config 2 @WebDriverIO @Puppeteer @Playwright', ({ I }) => {
   I.amOnPage('/')
-  I.seeInCurrentUrl('github.com')
-}).config({ url: 'https://github.com' })
+  I.seeInCurrentUrl('codecept.io')
+}).config({ url: 'https://codecept.io' })
 
 Scenario('change config 3 @WebDriverIO @Puppeteer @Playwright', ({ I }) => {
   I.amOnPage('/')
-  I.dontSeeInCurrentUrl('github.com')
+  I.dontSeeInCurrentUrl('codecept.io')
   I.seeInCurrentUrl('google.com')
 })
 
@@ -26,7 +26,7 @@ Scenario('change config 4 @WebDriverIO @Puppeteer @Playwright', ({ I }) => {
 
 Scenario('change config 5 @WebDriverIO @Puppeteer @Playwright', ({ I }) => {
   I.amOnPage('/')
-  I.dontSeeInCurrentUrl('github.com')
+  I.dontSeeInCurrentUrl('codecept.io')
   I.seeInCurrentUrl('google.com')
 })
 
@@ -38,10 +38,10 @@ Scenario('make API call and check response @Playwright', ({ I }) => {
 
 Scenario('change config 6 @WebDriverIO @Puppeteer @Playwright', ({ I }) => {
   I.amOnPage('/')
-  I.seeInCurrentUrl('github.com')
+  I.seeInCurrentUrl('codecept.io')
 }).config(async () => {
   await new Promise((r) => {
     setTimeout(r, 50)
   })
-  return { url: 'https://github.com' }
+  return { url: 'https://codecept.io' }
 })
