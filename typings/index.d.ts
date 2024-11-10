@@ -554,7 +554,7 @@ declare const xScenario: CodeceptJS.IScenario;
 declare const xFeature: CodeceptJS.IFeature;
 declare function Data(data: any): CodeceptJS.IData;
 declare function xData(data: any): CodeceptJS.IData;
-declare function defineParameterType(options: CodeceptJS.IParameterTypeDefinition<any>): void
+declare function DefineParameterType(options: CodeceptJS.IParameterTypeDefinition<any>): void
 
 // Hooks
 declare const BeforeSuite: CodeceptJS.IHook;
@@ -599,7 +599,7 @@ declare namespace NodeJS {
     Given: typeof Given;
     When: typeof When;
     Then: typeof Then;
-    DefineParameterType: typeof defineParameterType
+    DefineParameterType: typeof DefineParameterType
   }
 }
 
