@@ -242,10 +242,6 @@ I.runInWeb(() => {
 });
 ```
 
-#### Parameters
-
-*   `fn` **any**&#x20;
-
 ### checkIfAppIsInstalled
 
 Returns app installation status.
