@@ -373,7 +373,7 @@ describe('WebDriver - No Selenium server started', function () {
     it('should grab the innerHTML for an element', async () => {
       await wd.amOnPage('/')
       const source = await wd.grabHTMLFrom('#area1')
-      assert.deepEqual(source, '<a href="/form/file" qa-id="test" qa-link="test">Test Link</a>')
+      assert.deepEqual(source, '<a href="/form/file" qa-id="test" qa-link="test"> Test Link </a>')
     })
   })
 
