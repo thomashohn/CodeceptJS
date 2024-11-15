@@ -42,9 +42,10 @@ describe('WebDriver', function () {
       //      waitForTimeout: 5000,
       webSocketUrl: false,
       capabilities: {
-        chromeOptions: {
+        /*        chromeOptions: {
           args: ['--headless', '--disable-gpu', '--window-size=1280,1024'],
         },
+        */
       },
       customLocatorStrategies: {
         customSelector: (selector) => ({ 'element-6066-11e4-a52e-4f735466cecf': `${selector}-foobar` }),
@@ -1282,12 +1283,12 @@ describe('WebDriver - Basic Authentication', () => {
       //      smartWait: 0, // just to try
       host: TestHelper.seleniumHost(),
       port: TestHelper.seleniumPort(),
-      webSocketUrl: false,
       //      waitForTimeout: 5000,
       capabilities: {
-        chromeOptions: {
+        /*        chromeOptions: {
           args: ['--headless', '--disable-gpu', '--window-size=1280,1024'],
         },
+        */
       },
     })
   })
