@@ -35,17 +35,15 @@ describe('WebDriver', function () {
     wd = new WebDriver({
       url: siteUrl,
       browser: 'chrome',
-      //      windowSize: '500x700',
-      //     smartWait: 0, // just to try
+      windowSize: '500x700',
+      smartWait: 0, // just to try
       host: TestHelper.seleniumHost(),
       port: TestHelper.seleniumPort(),
-      //      waitForTimeout: 5000,
-      webSocketUrl: false,
+      waitForTimeout: 5000,
       capabilities: {
-        /*        chromeOptions: {
+        chromeOptions: {
           args: ['--headless', '--disable-gpu', '--window-size=1280,1024'],
         },
-        */
       },
       customLocatorStrategies: {
         customSelector: (selector) => ({ 'element-6066-11e4-a52e-4f735466cecf': `${selector}-foobar` }),
@@ -1278,17 +1276,16 @@ describe('WebDriver - Basic Authentication', () => {
       url: siteUrl,
       basicAuth: { username: 'admin', password: 'admin' },
       browser: 'chrome',
-      //     windowSize: '500x700',
+      windowSize: '500x700',
       remoteFileUpload: true,
-      //      smartWait: 0, // just to try
+      smartWait: 0, // just to try
       host: TestHelper.seleniumHost(),
       port: TestHelper.seleniumPort(),
-      //      waitForTimeout: 5000,
+      waitForTimeout: 5000,
       capabilities: {
-        /*        chromeOptions: {
+        chromeOptions: {
           args: ['--headless', '--disable-gpu', '--window-size=1280,1024'],
         },
-        */
       },
     })
   })
