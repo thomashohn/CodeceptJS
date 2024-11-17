@@ -1,7 +1,7 @@
 const I = actor();
 const axios = require('axios');
 
-Given('I have products in my cart', (table) => { // eslint-disable-line
+Given('I have products in my cart', (table) => {
   for (const id in table.rows) {
     if (id < 1) {
       continue;
