@@ -756,7 +756,18 @@ module.exports.tests = function () {
 
       await I.amOnPage('/info')
       const val = await I.grabHTMLFrom('#grab-multiple')
-      assert.equal('<a id="first-link">First</a>\n<a id="second-link">Second</a>\n<a id="third-link">Third</a>', val)
+      if (isHelper('WebDriver')) {
+        assert.equal('<a id="first-link">First</a>\n<a id="second-link">Second</a>\n<a id="third-link">Third</a>', val)
+      } else {
+        assert.equal(
+          `
+    <a id="first-link">First</a>
+    <a id="second-link">Second</a>
+    <a id="third-link">Third</a>
+`,
+          val,
+        )
+      }
     })
 
     it('should grab value from field', async () => {
