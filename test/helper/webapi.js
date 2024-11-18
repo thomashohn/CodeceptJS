@@ -1311,7 +1311,7 @@ module.exports.tests = function () {
 
       await I.amOnPage('/iframe')
       await I.resizeWindow(500, 700)
-      await I.switchTo(0)
+      await I.switchTo('iframe')
 
       const { x, y } = await I.grabPageScrollPosition()
       await I.scrollTo('.sign')

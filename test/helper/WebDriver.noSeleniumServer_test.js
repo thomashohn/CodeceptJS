@@ -1013,7 +1013,7 @@ describe('WebDriver - No Selenium server started', function () {
       await wd.amOnPage('/iframe')
       await wd.see('Iframe test', 'h1')
       await wd.dontSee('Information', 'h1')
-      await wd.switchTo(0)
+      await wd.switchTo('iframe')
       await wd.see('Information', 'h1')
       await wd.dontSee('Iframe test', 'h1')
     })
