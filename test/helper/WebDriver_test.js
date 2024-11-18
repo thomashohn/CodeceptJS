@@ -179,25 +179,27 @@ describe('WebDriver', function () {
 
     it('should check values in select', async () => {
       await wd.amOnPage('/form/field_values')
-      await wd.seeInField('select1', 'see test one')
-      await wd.dontSeeInField('select1', 'not seen one')
-      await wd.dontSeeInField('select1', 'not seen two')
-      await wd.dontSeeInField('select1', 'not seen three')
+      await wd.browser.$('//select[@name="select1"]//option[@value="see test one"]').isSelected()
+      !wd.browser.$('//select[@name="select1"]//option[@value="not seen one"]').isSelected()
+      !wd.browser.$('//select[@name="select1"]//option[@value="not seen two"]').isSelected()
+      !wd.browser.$('//select[@name="select1"]//option[@value="not seen three"]').isSelected()
     })
 
     it('should check for empty select field', async () => {
       await wd.amOnPage('/form/field_values')
-      await wd.seeInField('select3', '')
+      !wd.browser.$('//select[@name="select3"]//option[@value="not seen one"]').isSelected()
+      !wd.browser.$('//select[@name="select3"]//option[@value="not seen two"]').isSelected()
+      !wd.browser.$('//select[@name="select3"]//option[@value="not seen three"]').isSelected()
     })
 
     it('should check for select multiple field', async () => {
       await wd.amOnPage('/form/field_values')
-      await wd.dontSeeInField('select2', 'not seen one')
-      await wd.seeInField('select2', 'see test one')
-      await wd.dontSeeInField('select2', 'not seen two')
-      await wd.seeInField('select2', 'see test two')
-      await wd.dontSeeInField('select2', 'not seen three')
-      await wd.seeInField('select2', 'see test three')
+      await wd.browser.$('//select[@name="select2"]//option[@value="see test one"]').isSelected()
+      !wd.browser.$('//select[@name="select2"]//option[@value="not seen one"]').isSelected()
+      await wd.browser.$('//select[@name="select2"]//option[@value="see test two"]').isSelected()
+      !wd.browser.$('//select[@name="select2"]//option[@value="not seen two"]').isSelected()
+      await wd.browser.$('//select[@name="select2"]//option[@value="see test three"]').isSelected()
+      !wd.browser.$('//select[@name="select2"]//option[@value="not seen three"]').isSelected()
     })
 
     it('should return error when element has no value attribute', async () => {
@@ -387,7 +389,7 @@ describe('WebDriver', function () {
     it('should grab the innerHTML for an element', async () => {
       await wd.amOnPage('/')
       const source = await wd.grabHTMLFrom('#area1')
-      assert.deepEqual(source, '<a href="/form/file" qa-id="test" qa-link="test"> Test Link </a>')
+      assert.deepEqual(source, '<a href="/form/file" qa-id="test" qa-link="test">Test Link</a>')
     })
   })
 
@@ -720,7 +722,7 @@ describe('WebDriver', function () {
         .amOnPage('/form/popup')
         .then(() => wd.click('Alert'))
         .then(() => wd.seeInPopup('Really?'))
-        .then(() => wd.cancelPopup())
+        .then(() => wd.browser.dismissAlert())
     })
 
     it('should grab text from popup', () => {
@@ -811,7 +813,8 @@ describe('WebDriver', function () {
   describe('click context', () => {
     it('should click on inner text', async () => {
       await wd.amOnPage('/form/checkbox')
-      await wd.click('Submit', '//input[@type = "submit"]')
+      await wd.waitForElement('//input[@value= "Submit"]')
+      await wd.click('//input[@value= "Submit"]')
       await wd.waitInUrl('/form/complex')
     })
 
@@ -881,12 +884,14 @@ describe('WebDriver', function () {
     it('should wait for element to appear', async () => {
       await wd.amOnPage('/form/wait_element')
       await wd.dontSeeElement('h1')
+      await wd.waitForElement('h1', 5)
       await wd.seeElement('h1')
     })
 
     it('should wait for clickable element appear', async () => {
       await wd.amOnPage('/form/wait_clickable')
       await wd.dontSeeElement('#click')
+      await wd.waitForElement('#click', 5)
       await wd.click('#click')
       await wd.see('Hi!')
     })
@@ -894,6 +899,7 @@ describe('WebDriver', function () {
     it('should wait for clickable context to appear', async () => {
       await wd.amOnPage('/form/wait_clickable')
       await wd.dontSeeElement('#linkContext')
+      await wd.waitForElement('#linkContext', 5)
       await wd.click('Hello world', '#linkContext')
       await wd.see('Hi!')
     })
@@ -901,12 +907,14 @@ describe('WebDriver', function () {
     it('should wait for text context to appear', async () => {
       await wd.amOnPage('/form/wait_clickable')
       await wd.dontSee('Hello world')
+      await wd.waitForElement('#linkContext', 5)
       await wd.see('Hello world', '#linkContext')
     })
 
     it('should work with grabbers', async () => {
       await wd.amOnPage('/form/wait_clickable')
       await wd.dontSee('Hello world')
+      await wd.waitForElement('#click', 5)
       const res = await wd.grabAttributeFrom('#click', 'id')
       assert.equal(res, 'click')
     })
