@@ -32,7 +32,7 @@ describe('Puppeteer - BasicAuth', function () {
 
     I = new Puppeteer({
       url: siteUrl,
-      windowSize: '500x700',
+      // windowSize: '500x700',
       show: false,
       waitForTimeout: 5000,
       waitForAction: 500,
