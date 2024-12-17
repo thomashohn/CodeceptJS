@@ -486,31 +486,34 @@ ${changelog}`
       );
 
       // Filter out bot accounts
+      const excludeUsers = ['dependabot[bot]', 'actions-user'];
+
       const filteredContributors = response.data.filter(
-        (contributor) => !contributor.login.includes('dependabot'),
-      ).filter(
-        (contributor) => !contributor.login.includes('actions-user'),
+        (contributor) => !excludeUsers.includes(contributor.login),
       );
 
       const contributors = filteredContributors.map((contributor) => {
         return `
-<div style="text-align: center; margin: 10px;">
-  <a href="${contributor.html_url}" target="_blank">
-    <img src="${contributor.avatar_url}" width="100" height="100" style="border-radius: 50%;" alt="${contributor.login}">
+<td align="center">
+  <a href="${contributor.html_url}">
+    <img src="${contributor.avatar_url}" width="100" height="100" alt="${contributor.login}"/><br />
+    <sub><b>${contributor.login}</b></sub>
   </a>
-  <br>
-  <a href="${contributor.html_url}" target="_blank" style="text-decoration: none; color: inherit;">
-    <strong>${contributor.login}</strong>
-  </a>
-</div>
-      `;
+</td>`;
       });
 
-      // Wrap contributors in a grid container
-      const contributorsGrid = `
-<div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center;">
-  ${contributors.join('\n')}
-</div>
+      // Chunk contributors into rows of 4
+      const rows = [];
+      const chunkSize = 4;
+      for (let i = 0; i < contributors.length; i += chunkSize) {
+        rows.push(`<tr>${contributors.slice(i, i + chunkSize).join('')}</tr>`);
+      }
+
+      // Combine rows into a table
+      const contributorsTable = `
+<table>
+  ${rows.join('\n')}
+</table>
     `;
 
       const readmePath = path.join(__dirname, 'README.md');
@@ -523,12 +526,12 @@ ${changelog}`
       if (match) {
         const updatedContent = content.replace(
           contributorsSectionRegex,
-          `${match[1]}\n${contributorsGrid}\n${match[3]}`,
+          `${match[1]}\n${contributorsTable}\n${match[3]}`
         );
         fs.writeFileSync(readmePath, updatedContent, 'utf-8');
       } else {
         // If no contributors section exists, add one at the end
-        content += `\n${contributorsGrid}`;
+        content += `\n${contributorsTable}`;
         fs.writeFileSync(readmePath, content, 'utf-8');
       }
 
