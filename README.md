@@ -2,6 +2,7 @@
 
 
 
+
 [<img src="https://img.shields.io/badge/slack-@codeceptjs-purple.svg?logo=slack">](https://join.slack.com/t/codeceptjs/shared_invite/enQtMzA5OTM4NDM2MzA4LWE4MThhN2NmYTgxNTU5MTc4YzAyYWMwY2JkMmZlYWI5MWQ2MDM5MmRmYzZmYmNiNmY5NTAzM2EwMGIwOTNhOGQ) [<img src="https://img.shields.io/badge/discourse-codeceptjs-purple">](https://codecept.discourse.group) [![NPM version][npm-image]][npm-url] [<img src="https://img.shields.io/badge/dockerhub-images-blue.svg?logo=codeceptjs">](https://hub.docker.com/r/codeceptjs/codeceptjs)
 [![AI features](https://img.shields.io/badge/AI-features?logo=openai&logoColor=white)](https://github.com/codeceptjs/CodeceptJS/edit/3.x/docs/ai.md) [![StandWithUkraine](https://raw.githubusercontent.com/vshymanskyy/StandWithUkraine/main/badges/StandWithUkraine.svg)](https://github.com/vshymanskyy/StandWithUkraine/blob/main/docs/README.md) 
 
@@ -292,49 +293,316 @@ When using Typescript, replace `module.exports` with `export` for autocompletion
 
 ## Contributors
 
-Thanks all to those who are and will have contributing to this awesome project!
 
-[//]: contributor-faces
-<a href="https://github.com/DavertMik"><img src="https://avatars.githubusercontent.com/u/220264?v=4" title="DavertMik" width="80" height="80"></a>
-<a href="https://github.com/kobenguyent"><img src="https://avatars.githubusercontent.com/u/7845001?v=4" title="kobenguyent" width="80" height="80"></a>
-<a href="https://github.com/Vorobeyko"><img src="https://avatars.githubusercontent.com/u/11293201?v=4" title="Vorobeyko" width="80" height="80"></a>
-<a href="https://github.com/reubenmiller"><img src="https://avatars.githubusercontent.com/u/3029781?v=4" title="reubenmiller" width="80" height="80"></a>
-<a href="https://github.com/Arhell"><img src="https://avatars.githubusercontent.com/u/26163841?v=4" title="Arhell" width="80" height="80"></a>
-<a href="https://github.com/APshenkin"><img src="https://avatars.githubusercontent.com/u/14344430?v=4" title="APshenkin" width="80" height="80"></a>
-<a href="https://github.com/fabioel"><img src="https://avatars.githubusercontent.com/u/9824235?v=4" title="fabioel" width="80" height="80"></a>
-<a href="https://github.com/pablopaul"><img src="https://avatars.githubusercontent.com/u/635526?v=4" title="pablopaul" width="80" height="80"></a>
-<a href="https://github.com/mirao"><img src="https://avatars.githubusercontent.com/u/12584138?v=4" title="mirao" width="80" height="80"></a>
-<a href="https://github.com/Georgegriff"><img src="https://avatars.githubusercontent.com/u/9056958?v=4" title="Georgegriff" width="80" height="80"></a>
-<a href="https://github.com/KMKoushik"><img src="https://avatars.githubusercontent.com/u/24666922?v=4" title="KMKoushik" width="80" height="80"></a>
-<a href="https://github.com/nikocanvacom"><img src="https://avatars.githubusercontent.com/u/83254493?v=4" title="nikocanvacom" width="80" height="80"></a>
-<a href="https://github.com/elukoyanov"><img src="https://avatars.githubusercontent.com/u/11647141?v=4" title="elukoyanov" width="80" height="80"></a>
-<a href="https://github.com/gkushang"><img src="https://avatars.githubusercontent.com/u/3663389?v=4" title="gkushang" width="80" height="80"></a>
-<a href="https://github.com/thomashohn"><img src="https://avatars.githubusercontent.com/u/3414869?v=4" title="thomashohn" width="80" height="80"></a>
-<a href="https://github.com/tsuemura"><img src="https://avatars.githubusercontent.com/u/17092259?v=4" title="tsuemura" width="80" height="80"></a>
-<a href="https://github.com/EgorBodnar"><img src="https://avatars.githubusercontent.com/u/63167966?v=4" title="EgorBodnar" width="80" height="80"></a>
-<a href="https://github.com/VikalpP"><img src="https://avatars.githubusercontent.com/u/11846339?v=4" title="VikalpP" width="80" height="80"></a>
-<a href="https://github.com/elaichenkov"><img src="https://avatars.githubusercontent.com/u/29764053?v=4" title="elaichenkov" width="80" height="80"></a>
-<a href="https://github.com/BorisOsipov"><img src="https://avatars.githubusercontent.com/u/6514276?v=4" title="BorisOsipov" width="80" height="80"></a>
-<a href="https://github.com/ngraf"><img src="https://avatars.githubusercontent.com/u/7094389?v=4" title="ngraf" width="80" height="80"></a>
-<a href="https://github.com/nitschSB"><img src="https://avatars.githubusercontent.com/u/39341455?v=4" title="nitschSB" width="80" height="80"></a>
-<a href="https://github.com/hubidu"><img src="https://avatars.githubusercontent.com/u/13134082?v=4" title="hubidu" width="80" height="80"></a>
-<a href="https://github.com/jploskonka"><img src="https://avatars.githubusercontent.com/u/669483?v=4" title="jploskonka" width="80" height="80"></a>
-<a href="https://github.com/maojunxyz"><img src="https://avatars.githubusercontent.com/u/28778042?v=4" title="maojunxyz" width="80" height="80"></a>
-<a href="https://github.com/abhimanyupandian"><img src="https://avatars.githubusercontent.com/u/36107381?v=4" title="abhimanyupandian" width="80" height="80"></a>
-<a href="https://github.com/martomo"><img src="https://avatars.githubusercontent.com/u/1850135?v=4" title="martomo" width="80" height="80"></a>
-<a href="https://github.com/hatufacci"><img src="https://avatars.githubusercontent.com/u/4963181?v=4" title="hatufacci" width="80" height="80"></a>
 
-[//]: contributor-faces
+<div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center;">
+  
+<div style="text-align: center; margin: 10px;">
+  <a href="https://github.com/DavertMik" target="_blank">
+    <img src="https://avatars.githubusercontent.com/u/220264?v=4" width="100" height="100" style="border-radius: 50%;" alt="DavertMik">
+  </a>
+  <br>
+  <a href="https://github.com/DavertMik" target="_blank" style="text-decoration: none; color: inherit;">
+    <strong>DavertMik</strong>
+  </a>
+</div>
+      
 
-## License
+<div style="text-align: center; margin: 10px;">
+  <a href="https://github.com/kobenguyent" target="_blank">
+    <img src="https://avatars.githubusercontent.com/u/7845001?v=4" width="100" height="100" style="border-radius: 50%;" alt="kobenguyent">
+  </a>
+  <br>
+  <a href="https://github.com/kobenguyent" target="_blank" style="text-decoration: none; color: inherit;">
+    <strong>kobenguyent</strong>
+  </a>
+</div>
+      
 
-MIT © [CodeceptJS Team](http://codecept.io)
+<div style="text-align: center; margin: 10px;">
+  <a href="https://github.com/Vorobeyko" target="_blank">
+    <img src="https://avatars.githubusercontent.com/u/11293201?v=4" width="100" height="100" style="border-radius: 50%;" alt="Vorobeyko">
+  </a>
+  <br>
+  <a href="https://github.com/Vorobeyko" target="_blank" style="text-decoration: none; color: inherit;">
+    <strong>Vorobeyko</strong>
+  </a>
+</div>
+      
 
-[npm-image]: https://badge.fury.io/js/codeceptjs.svg
-[npm-url]: https://npmjs.org/package/codeceptjs
-[travis-image]: https://travis-ci.org/Codeception/codeceptjs.svg?branch=master
-[travis-url]: https://travis-ci.org/Codeception/codeceptjs
-[daviddm-image]: https://david-dm.org/Codeception/codeceptjs.svg?theme=shields.io
-[daviddm-url]: https://david-dm.org/Codeception/codeceptjs
-[coveralls-image]: https://coveralls.io/repos/Codeception/codeceptjs/badge.svg
-[coveralls-url]: https://coveralls.io/r/Codeception/codeceptjs
+<div style="text-align: center; margin: 10px;">
+  <a href="https://github.com/reubenmiller" target="_blank">
+    <img src="https://avatars.githubusercontent.com/u/3029781?v=4" width="100" height="100" style="border-radius: 50%;" alt="reubenmiller">
+  </a>
+  <br>
+  <a href="https://github.com/reubenmiller" target="_blank" style="text-decoration: none; color: inherit;">
+    <strong>reubenmiller</strong>
+  </a>
+</div>
+      
+
+<div style="text-align: center; margin: 10px;">
+  <a href="https://github.com/Arhell" target="_blank">
+    <img src="https://avatars.githubusercontent.com/u/26163841?v=4" width="100" height="100" style="border-radius: 50%;" alt="Arhell">
+  </a>
+  <br>
+  <a href="https://github.com/Arhell" target="_blank" style="text-decoration: none; color: inherit;">
+    <strong>Arhell</strong>
+  </a>
+</div>
+      
+
+<div style="text-align: center; margin: 10px;">
+  <a href="https://github.com/APshenkin" target="_blank">
+    <img src="https://avatars.githubusercontent.com/u/14344430?v=4" width="100" height="100" style="border-radius: 50%;" alt="APshenkin">
+  </a>
+  <br>
+  <a href="https://github.com/APshenkin" target="_blank" style="text-decoration: none; color: inherit;">
+    <strong>APshenkin</strong>
+  </a>
+</div>
+      
+
+<div style="text-align: center; margin: 10px;">
+  <a href="https://github.com/fabioel" target="_blank">
+    <img src="https://avatars.githubusercontent.com/u/9824235?v=4" width="100" height="100" style="border-radius: 50%;" alt="fabioel">
+  </a>
+  <br>
+  <a href="https://github.com/fabioel" target="_blank" style="text-decoration: none; color: inherit;">
+    <strong>fabioel</strong>
+  </a>
+</div>
+      
+
+<div style="text-align: center; margin: 10px;">
+  <a href="https://github.com/pablopaul" target="_blank">
+    <img src="https://avatars.githubusercontent.com/u/635526?v=4" width="100" height="100" style="border-radius: 50%;" alt="pablopaul">
+  </a>
+  <br>
+  <a href="https://github.com/pablopaul" target="_blank" style="text-decoration: none; color: inherit;">
+    <strong>pablopaul</strong>
+  </a>
+</div>
+      
+
+<div style="text-align: center; margin: 10px;">
+  <a href="https://github.com/mirao" target="_blank">
+    <img src="https://avatars.githubusercontent.com/u/12584138?v=4" width="100" height="100" style="border-radius: 50%;" alt="mirao">
+  </a>
+  <br>
+  <a href="https://github.com/mirao" target="_blank" style="text-decoration: none; color: inherit;">
+    <strong>mirao</strong>
+  </a>
+</div>
+      
+
+<div style="text-align: center; margin: 10px;">
+  <a href="https://github.com/Georgegriff" target="_blank">
+    <img src="https://avatars.githubusercontent.com/u/9056958?v=4" width="100" height="100" style="border-radius: 50%;" alt="Georgegriff">
+  </a>
+  <br>
+  <a href="https://github.com/Georgegriff" target="_blank" style="text-decoration: none; color: inherit;">
+    <strong>Georgegriff</strong>
+  </a>
+</div>
+      
+
+<div style="text-align: center; margin: 10px;">
+  <a href="https://github.com/KMKoushik" target="_blank">
+    <img src="https://avatars.githubusercontent.com/u/24666922?v=4" width="100" height="100" style="border-radius: 50%;" alt="KMKoushik">
+  </a>
+  <br>
+  <a href="https://github.com/KMKoushik" target="_blank" style="text-decoration: none; color: inherit;">
+    <strong>KMKoushik</strong>
+  </a>
+</div>
+      
+
+<div style="text-align: center; margin: 10px;">
+  <a href="https://github.com/nikocanvacom" target="_blank">
+    <img src="https://avatars.githubusercontent.com/u/83254493?v=4" width="100" height="100" style="border-radius: 50%;" alt="nikocanvacom">
+  </a>
+  <br>
+  <a href="https://github.com/nikocanvacom" target="_blank" style="text-decoration: none; color: inherit;">
+    <strong>nikocanvacom</strong>
+  </a>
+</div>
+      
+
+<div style="text-align: center; margin: 10px;">
+  <a href="https://github.com/elukoyanov" target="_blank">
+    <img src="https://avatars.githubusercontent.com/u/11647141?v=4" width="100" height="100" style="border-radius: 50%;" alt="elukoyanov">
+  </a>
+  <br>
+  <a href="https://github.com/elukoyanov" target="_blank" style="text-decoration: none; color: inherit;">
+    <strong>elukoyanov</strong>
+  </a>
+</div>
+      
+
+<div style="text-align: center; margin: 10px;">
+  <a href="https://github.com/gkushang" target="_blank">
+    <img src="https://avatars.githubusercontent.com/u/3663389?v=4" width="100" height="100" style="border-radius: 50%;" alt="gkushang">
+  </a>
+  <br>
+  <a href="https://github.com/gkushang" target="_blank" style="text-decoration: none; color: inherit;">
+    <strong>gkushang</strong>
+  </a>
+</div>
+      
+
+<div style="text-align: center; margin: 10px;">
+  <a href="https://github.com/thomashohn" target="_blank">
+    <img src="https://avatars.githubusercontent.com/u/3414869?v=4" width="100" height="100" style="border-radius: 50%;" alt="thomashohn">
+  </a>
+  <br>
+  <a href="https://github.com/thomashohn" target="_blank" style="text-decoration: none; color: inherit;">
+    <strong>thomashohn</strong>
+  </a>
+</div>
+      
+
+<div style="text-align: center; margin: 10px;">
+  <a href="https://github.com/tsuemura" target="_blank">
+    <img src="https://avatars.githubusercontent.com/u/17092259?v=4" width="100" height="100" style="border-radius: 50%;" alt="tsuemura">
+  </a>
+  <br>
+  <a href="https://github.com/tsuemura" target="_blank" style="text-decoration: none; color: inherit;">
+    <strong>tsuemura</strong>
+  </a>
+</div>
+      
+
+<div style="text-align: center; margin: 10px;">
+  <a href="https://github.com/EgorBodnar" target="_blank">
+    <img src="https://avatars.githubusercontent.com/u/63167966?v=4" width="100" height="100" style="border-radius: 50%;" alt="EgorBodnar">
+  </a>
+  <br>
+  <a href="https://github.com/EgorBodnar" target="_blank" style="text-decoration: none; color: inherit;">
+    <strong>EgorBodnar</strong>
+  </a>
+</div>
+      
+
+<div style="text-align: center; margin: 10px;">
+  <a href="https://github.com/VikalpP" target="_blank">
+    <img src="https://avatars.githubusercontent.com/u/11846339?v=4" width="100" height="100" style="border-radius: 50%;" alt="VikalpP">
+  </a>
+  <br>
+  <a href="https://github.com/VikalpP" target="_blank" style="text-decoration: none; color: inherit;">
+    <strong>VikalpP</strong>
+  </a>
+</div>
+      
+
+<div style="text-align: center; margin: 10px;">
+  <a href="https://github.com/elaichenkov" target="_blank">
+    <img src="https://avatars.githubusercontent.com/u/29764053?v=4" width="100" height="100" style="border-radius: 50%;" alt="elaichenkov">
+  </a>
+  <br>
+  <a href="https://github.com/elaichenkov" target="_blank" style="text-decoration: none; color: inherit;">
+    <strong>elaichenkov</strong>
+  </a>
+</div>
+      
+
+<div style="text-align: center; margin: 10px;">
+  <a href="https://github.com/BorisOsipov" target="_blank">
+    <img src="https://avatars.githubusercontent.com/u/6514276?v=4" width="100" height="100" style="border-radius: 50%;" alt="BorisOsipov">
+  </a>
+  <br>
+  <a href="https://github.com/BorisOsipov" target="_blank" style="text-decoration: none; color: inherit;">
+    <strong>BorisOsipov</strong>
+  </a>
+</div>
+      
+
+<div style="text-align: center; margin: 10px;">
+  <a href="https://github.com/ngraf" target="_blank">
+    <img src="https://avatars.githubusercontent.com/u/7094389?v=4" width="100" height="100" style="border-radius: 50%;" alt="ngraf">
+  </a>
+  <br>
+  <a href="https://github.com/ngraf" target="_blank" style="text-decoration: none; color: inherit;">
+    <strong>ngraf</strong>
+  </a>
+</div>
+      
+
+<div style="text-align: center; margin: 10px;">
+  <a href="https://github.com/nitschSB" target="_blank">
+    <img src="https://avatars.githubusercontent.com/u/39341455?v=4" width="100" height="100" style="border-radius: 50%;" alt="nitschSB">
+  </a>
+  <br>
+  <a href="https://github.com/nitschSB" target="_blank" style="text-decoration: none; color: inherit;">
+    <strong>nitschSB</strong>
+  </a>
+</div>
+      
+
+<div style="text-align: center; margin: 10px;">
+  <a href="https://github.com/hubidu" target="_blank">
+    <img src="https://avatars.githubusercontent.com/u/13134082?v=4" width="100" height="100" style="border-radius: 50%;" alt="hubidu">
+  </a>
+  <br>
+  <a href="https://github.com/hubidu" target="_blank" style="text-decoration: none; color: inherit;">
+    <strong>hubidu</strong>
+  </a>
+</div>
+      
+
+<div style="text-align: center; margin: 10px;">
+  <a href="https://github.com/jploskonka" target="_blank">
+    <img src="https://avatars.githubusercontent.com/u/669483?v=4" width="100" height="100" style="border-radius: 50%;" alt="jploskonka">
+  </a>
+  <br>
+  <a href="https://github.com/jploskonka" target="_blank" style="text-decoration: none; color: inherit;">
+    <strong>jploskonka</strong>
+  </a>
+</div>
+      
+
+<div style="text-align: center; margin: 10px;">
+  <a href="https://github.com/maojunxyz" target="_blank">
+    <img src="https://avatars.githubusercontent.com/u/28778042?v=4" width="100" height="100" style="border-radius: 50%;" alt="maojunxyz">
+  </a>
+  <br>
+  <a href="https://github.com/maojunxyz" target="_blank" style="text-decoration: none; color: inherit;">
+    <strong>maojunxyz</strong>
+  </a>
+</div>
+      
+
+<div style="text-align: center; margin: 10px;">
+  <a href="https://github.com/abhimanyupandian" target="_blank">
+    <img src="https://avatars.githubusercontent.com/u/36107381?v=4" width="100" height="100" style="border-radius: 50%;" alt="abhimanyupandian">
+  </a>
+  <br>
+  <a href="https://github.com/abhimanyupandian" target="_blank" style="text-decoration: none; color: inherit;">
+    <strong>abhimanyupandian</strong>
+  </a>
+</div>
+      
+
+<div style="text-align: center; margin: 10px;">
+  <a href="https://github.com/martomo" target="_blank">
+    <img src="https://avatars.githubusercontent.com/u/1850135?v=4" width="100" height="100" style="border-radius: 50%;" alt="martomo">
+  </a>
+  <br>
+  <a href="https://github.com/martomo" target="_blank" style="text-decoration: none; color: inherit;">
+    <strong>martomo</strong>
+  </a>
+</div>
+      
+
+<div style="text-align: center; margin: 10px;">
+  <a href="https://github.com/hatufacci" target="_blank">
+    <img src="https://avatars.githubusercontent.com/u/4963181?v=4" width="100" height="100" style="border-radius: 50%;" alt="hatufacci">
+  </a>
+  <br>
+  <a href="https://github.com/hatufacci" target="_blank" style="text-decoration: none; color: inherit;">
+    <strong>hatufacci</strong>
+  </a>
+</div>
+      
+</div>
+    
