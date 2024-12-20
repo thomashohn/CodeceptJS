@@ -526,7 +526,7 @@ ${changelog}`
       if (match) {
         const updatedContent = content.replace(
           contributorsSectionRegex,
-          `${match[1]}\n${contributorsTable}\n${match[3]}`
+          `${match[1]}\n${contributorsTable}\n${match[3]}`,
         );
         fs.writeFileSync(readmePath, updatedContent, 'utf-8');
       } else {
