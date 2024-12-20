@@ -116,7 +116,7 @@
     "uuid": "11.0"
   },
   "optionalDependencies": {
-    "@codeceptjs/detox-helper": "1.1.2"
+    "@codeceptjs/detox-helper": "1.1.4"
   },
   "devDependencies": {
     "@codeceptjs/mock-request": "0.3.1",
