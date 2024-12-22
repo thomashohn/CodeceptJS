@@ -478,19 +478,14 @@ ${changelog}`
     const token = process.env.GH_TOKEN
 
     try {
-      const response = await axios.get(
-        `https://api.github.com/repos/${owner}/${repo}/contributors`,
-        {
-          headers: { Authorization: `token ${token}` },
-        },
-      );
+      const response = await axios.get(`https://api.github.com/repos/${owner}/${repo}/contributors`, {
+        headers: { Authorization: `token ${token}` },
+      })
 
       // Filter out bot accounts
-      const excludeUsers = ['dependabot[bot]', 'actions-user'];
+      const excludeUsers = ['dependabot[bot]', 'actions-user']
 
-      const filteredContributors = response.data.filter(
-        (contributor) => !excludeUsers.includes(contributor.login),
-      );
+      const filteredContributors = response.data.filter((contributor) => !excludeUsers.includes(contributor.login))
 
       const contributors = filteredContributors.map((contributor) => {
         return `
@@ -499,14 +494,14 @@ ${changelog}`
     <img src="${contributor.avatar_url}" width="100" height="100" alt="${contributor.login}"/><br />
     <sub><b>${contributor.login}</b></sub>
   </a>
-</td>`;
-      });
+</td>`
+      })
 
       // Chunk contributors into rows of 4
-      const rows = [];
-      const chunkSize = 4;
+      const rows = []
+      const chunkSize = 4
       for (let i = 0; i < contributors.length; i += chunkSize) {
-        rows.push(`<tr>${contributors.slice(i, i + chunkSize).join('')}</tr>`);
+        rows.push(`<tr>${contributors.slice(i, i + chunkSize).join('')}</tr>`)
       }
 
       // Combine rows into a table
@@ -514,30 +509,30 @@ ${changelog}`
 <table>
   ${rows.join('\n')}
 </table>
-    `;
+    `
 
-      const readmePath = path.join(__dirname, 'README.md');
-      let content = fs.readFileSync(readmePath, 'utf-8');
+      const readmePath = path.join(__dirname, 'README.md')
+      let content = fs.readFileSync(readmePath, 'utf-8')
 
       // Replace or add the contributors section in the README
-      const contributorsSectionRegex = /(## Contributors\s*\n)([\s\S]*?)(\n##|$)/;
-      const match = content.match(contributorsSectionRegex);
+      const contributorsSectionRegex = /(## Contributors\s*\n)([\s\S]*?)(\n##|$)/
+      const match = content.match(contributorsSectionRegex)
 
       if (match) {
         const updatedContent = content.replace(
           contributorsSectionRegex,
-          `${match[1]}\n${contributorsTable}\n${match[3]}`
-        );
-        fs.writeFileSync(readmePath, updatedContent, 'utf-8');
+          `${match[1]}\n${contributorsTable}\n${match[3]}`,
+        )
+        fs.writeFileSync(readmePath, updatedContent, 'utf-8')
       } else {
         // If no contributors section exists, add one at the end
-        content += `\n${contributorsTable}`;
-        fs.writeFileSync(readmePath, content, 'utf-8');
+        content += `\n${contributorsTable}`
+        fs.writeFileSync(readmePath, content, 'utf-8')
       }
 
-      console.log('Contributors section updated successfully!');
+      console.log('Contributors section updated successfully!')
     } catch (error) {
-      console.error('Error fetching contributors:', error.message);
+      console.error('Error fetching contributors:', error.message)
     }
   },
 
