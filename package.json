@@ -75,7 +75,7 @@
     "@cucumber/messages": "27.0.2",
     "@xmldom/xmldom": "0.9.6",
     "acorn": "8.14.0",
-    "arrify": "2.0.1",
+    "arrify": "3.0.0",
     "axios": "1.7.9",
     "chai": "5.1.1",
     "chai-deep-match": "1.2.1",
