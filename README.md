@@ -1,10 +1,7 @@
 [![Stand With Ukraine](https://raw.githubusercontent.com/vshymanskyy/StandWithUkraine/main/banner-direct-single.svg)](https://stand-with-ukraine.pp.ua)
 
-
-
-
 [<img src="https://img.shields.io/badge/slack-@codeceptjs-purple.svg?logo=slack">](https://join.slack.com/t/codeceptjs/shared_invite/enQtMzA5OTM4NDM2MzA4LWE4MThhN2NmYTgxNTU5MTc4YzAyYWMwY2JkMmZlYWI5MWQ2MDM5MmRmYzZmYmNiNmY5NTAzM2EwMGIwOTNhOGQ) [<img src="https://img.shields.io/badge/discourse-codeceptjs-purple">](https://codecept.discourse.group) [![NPM version][npm-image]][npm-url] [<img src="https://img.shields.io/badge/dockerhub-images-blue.svg?logo=codeceptjs">](https://hub.docker.com/r/codeceptjs/codeceptjs)
-[![AI features](https://img.shields.io/badge/AI-features?logo=openai&logoColor=white)](https://github.com/codeceptjs/CodeceptJS/edit/3.x/docs/ai.md) [![StandWithUkraine](https://raw.githubusercontent.com/vshymanskyy/StandWithUkraine/main/badges/StandWithUkraine.svg)](https://github.com/vshymanskyy/StandWithUkraine/blob/main/docs/README.md) 
+[![AI features](https://img.shields.io/badge/AI-features?logo=openai&logoColor=white)](https://github.com/codeceptjs/CodeceptJS/edit/3.x/docs/ai.md) [![StandWithUkraine](https://raw.githubusercontent.com/vshymanskyy/StandWithUkraine/main/badges/StandWithUkraine.svg)](https://github.com/vshymanskyy/StandWithUkraine/blob/main/docs/README.md)
 
 Build Status:
 
@@ -28,28 +25,28 @@ It abstracts browser interaction to simple steps that are written from a user's 
 A simple test that verifies the "Welcome" text is present on a main page of a site will look like:
 
 ```js
-Feature('CodeceptJS demo');
+Feature('CodeceptJS demo')
 
 Scenario('check Welcome page on site', ({ I }) => {
-  I.amOnPage('/');
-  I.see('Welcome');
-});
+  I.amOnPage('/')
+  I.see('Welcome')
+})
 ```
 
 CodeceptJS tests are:
 
-* **Synchronous**. You don't need to care about callbacks or promises or test scenarios which are linear. But, your tests should be linear.
-* Written from **user's perspective**. Every action is a method of `I`. That makes test easy to read, write and maintain even for non-tech persons.
-* Backend **API agnostic**. We don't know which WebDriver implementation is running this test.
+- **Synchronous**. You don't need to care about callbacks or promises or test scenarios which are linear. But, your tests should be linear.
+- Written from **user's perspective**. Every action is a method of `I`. That makes test easy to read, write and maintain even for non-tech persons.
+- Backend **API agnostic**. We don't know which WebDriver implementation is running this test.
 
 CodeceptJS uses **Helper** modules to provide actions to `I` object. Currently, CodeceptJS has these helpers:
 
-* [**Playwright**](https://github.com/codeceptjs/CodeceptJS/blob/master/docs/helpers/Playwright.md) - is a Node library to automate the Chromium, WebKit and Firefox browsers with a single API.
-* [**Puppeteer**](https://github.com/codeceptjs/CodeceptJS/blob/master/docs/helpers/Puppeteer.md) - uses Google Chrome's Puppeteer for fast headless testing.
-* [**WebDriver**](https://github.com/codeceptjs/CodeceptJS/blob/master/docs/helpers/WebDriver.md) - uses [webdriverio](http://webdriver.io/) to run tests via WebDriver or Devtools protocol.
-* [**TestCafe**](https://github.com/codeceptjs/CodeceptJS/blob/master/docs/helpers/TestCafe.md) - cheap and fast cross-browser test automation.
-* [**Appium**](https://github.com/codeceptjs/CodeceptJS/blob/master/docs/helpers/Appium.md) - for **mobile testing** with Appium
-* [**Detox**](https://github.com/codeceptjs/CodeceptJS/blob/master/docs/helpers/Detox.md) - This is a wrapper on top of Detox library, aimed to unify testing experience for CodeceptJS framework. Detox provides a grey box testing for mobile applications, playing especially well for React Native apps.
+- [**Playwright**](https://github.com/codeceptjs/CodeceptJS/blob/master/docs/helpers/Playwright.md) - is a Node library to automate the Chromium, WebKit and Firefox browsers with a single API.
+- [**Puppeteer**](https://github.com/codeceptjs/CodeceptJS/blob/master/docs/helpers/Puppeteer.md) - uses Google Chrome's Puppeteer for fast headless testing.
+- [**WebDriver**](https://github.com/codeceptjs/CodeceptJS/blob/master/docs/helpers/WebDriver.md) - uses [webdriverio](http://webdriver.io/) to run tests via WebDriver or Devtools protocol.
+- [**TestCafe**](https://github.com/codeceptjs/CodeceptJS/blob/master/docs/helpers/TestCafe.md) - cheap and fast cross-browser test automation.
+- [**Appium**](https://github.com/codeceptjs/CodeceptJS/blob/master/docs/helpers/Appium.md) - for **mobile testing** with Appium
+- [**Detox**](https://github.com/codeceptjs/CodeceptJS/blob/master/docs/helpers/Detox.md) - This is a wrapper on top of Detox library, aimed to unify testing experience for CodeceptJS framework. Detox provides a grey box testing for mobile applications, playing especially well for React Native apps.
 
 And more to come...
 
@@ -59,17 +56,16 @@ CodeceptJS is a successor of [Codeception](http://codeception.com), a popular fu
 With CodeceptJS your scenario-driven functional and acceptance tests will be as simple and clean as they can be.
 You don't need to worry about asynchronous nature of NodeJS or about various APIs of Playwright, Selenium, Puppeteer, TestCafe, etc. as CodeceptJS unifies them and makes them work as they are synchronous.
 
-
 ## Features
- 
-* 🪄 **AI-powered** with GPT features to assist and heal failing tests.
-* ☕ Based on [Mocha](https://mochajs.org/) testing framework.
-* 💼 Designed for scenario driven acceptance testing in BDD-style.
-* 💻 Uses ES6 natively without transpiler.
-* Also plays nice with TypeScript.
-* </> Smart locators: use names, labels, matching text, CSS or XPath to locate elements.
-* 🌐 Interactive debugging shell: pause test at any point and try different commands in a browser.
-* Easily create tests, pageobjects, stepobjects with CLI generators.
+
+- 🪄 **AI-powered** with GPT features to assist and heal failing tests.
+- ☕ Based on [Mocha](https://mochajs.org/) testing framework.
+- 💼 Designed for scenario driven acceptance testing in BDD-style.
+- 💻 Uses ES6 natively without transpiler.
+- Also plays nice with TypeScript.
+- </> Smart locators: use names, labels, matching text, CSS or XPath to locate elements.
+- 🌐 Interactive debugging shell: pause test at any point and try different commands in a browser.
+- Easily create tests, pageobjects, stepobjects with CLI generators.
 
 ## Installation
 
@@ -106,7 +102,8 @@ npx codeceptjs def .
 Later you can even automagically update Type Definitions to include your own custom [helpers methods](docs/helpers.md).
 
 Note:
-- CodeceptJS requires Node.js version `12+` or later. 
+
+- CodeceptJS requires Node.js version `12+` or later.
 
 ## Usage
 
@@ -117,18 +114,18 @@ Learn CodeceptJS by examples. Let's assume we have CodeceptJS installed and WebD
 Let's see how we can handle basic form testing:
 
 ```js
-Feature('CodeceptJS Demonstration');
+Feature('CodeceptJS Demonstration')
 
 Scenario('test some forms', ({ I }) => {
-  I.amOnPage('http://simple-form-bootstrap.plataformatec.com.br/documentation');
-  I.fillField('Email', 'hello@world.com');
-  I.fillField('Password', secret('123456'));
-  I.checkOption('Active');
-  I.checkOption('Male');
-  I.click('Create User');
-  I.see('User is valid');
-  I.dontSeeInCurrentUrl('/documentation');
-});
+  I.amOnPage('http://simple-form-bootstrap.plataformatec.com.br/documentation')
+  I.fillField('Email', 'hello@world.com')
+  I.fillField('Password', secret('123456'))
+  I.checkOption('Active')
+  I.checkOption('Male')
+  I.click('Create User')
+  I.see('User is valid')
+  I.dontSeeInCurrentUrl('/documentation')
+})
 ```
 
 All actions are performed by `I` object; assertions functions start with `see` function.
@@ -173,11 +170,11 @@ The same way you can locate element by name, `CSS` or `XPath` locators in tests:
 
 ```js
 // by name
-I.fillField('user_basic[email]', 'hello@world.com');
+I.fillField('user_basic[email]', 'hello@world.com')
 // by CSS
-I.fillField('#user_basic_email', 'hello@world.com');
+I.fillField('#user_basic_email', 'hello@world.com')
 // don't make us guess locator type, specify it
-I.fillField({css: '#user_basic_email'}, 'hello@world.com');
+I.fillField({ css: '#user_basic_email' }, 'hello@world.com')
 ```
 
 Other methods like `checkOption`, and `click` work in a similar manner. They can take labels or CSS or XPath locators to find elements to interact.
@@ -188,9 +185,9 @@ Assertions start with `see` or `dontSee` prefix. In our case we are asserting th
 However, we can narrow the search to particular element by providing a second parameter:
 
 ```js
-I.see('User is valid');
+I.see('User is valid')
 // better to specify context:
-I.see('User is valid', '.alert-success');
+I.see('User is valid', '.alert-success')
 ```
 
 In this case 'User is valid' string will be searched only inside elements located by CSS `.alert-success`.
@@ -201,13 +198,13 @@ In case you need to return a value from a webpage and use it directly in test, y
 They are expected to be used inside `async/await` functions, and their results will be available in test:
 
 ```js
-Feature('CodeceptJS Demonstration');
+Feature('CodeceptJS Demonstration')
 
 Scenario('test page title', async ({ I }) => {
-  I.amOnPage('http://simple-form-bootstrap.plataformatec.com.br/documentation');
-  const title = await I.grabTitle();
-  I.expectEqual(title, 'Example application with SimpleForm and Twitter Bootstrap'); // Avaiable with Expect helper. -> https://codecept.io/helpers/Expect/
-});
+  I.amOnPage('http://simple-form-bootstrap.plataformatec.com.br/documentation')
+  const title = await I.grabTitle()
+  I.expectEqual(title, 'Example application with SimpleForm and Twitter Bootstrap') // Avaiable with Expect helper. -> https://codecept.io/helpers/Expect/
+})
 ```
 
 The same way you can grab text, attributes, or form values and use them in next test steps.
@@ -217,23 +214,24 @@ The same way you can grab text, attributes, or form values and use them in next 
 Common preparation steps like opening a web page, logging in a user, can be placed in `Before` or `Background`:
 
 ```js
-const { I } = inject();
+const { I } = inject()
 
-Feature('CodeceptJS Demonstration');
+Feature('CodeceptJS Demonstration')
 
-Before(() => { // or Background
-  I.amOnPage('http://simple-form-bootstrap.plataformatec.com.br/documentation');
-});
+Before(() => {
+  // or Background
+  I.amOnPage('http://simple-form-bootstrap.plataformatec.com.br/documentation')
+})
 
 Scenario('test some forms', () => {
-  I.click('Create User');
-  I.see('User is valid');
-  I.dontSeeInCurrentUrl('/documentation');
-});
+  I.click('Create User')
+  I.see('User is valid')
+  I.dontSeeInCurrentUrl('/documentation')
+})
 
 Scenario('test title', () => {
-  I.seeInTitle('Example application');
-});
+  I.seeInTitle('Example application')
+})
 ```
 
 ## PageObjects
@@ -249,57 +247,48 @@ It will create a page object file for you and add it to the config.
 Let's assume we created one named `docsPage`:
 
 ```js
-const { I } = inject();
+const { I } = inject()
 
 module.exports = {
   fields: {
     email: '#user_basic_email',
-    password: '#user_basic_password'
+    password: '#user_basic_password',
   },
-  submitButton: {css: '#new_user_basic input[type=submit]'},
+  submitButton: { css: '#new_user_basic input[type=submit]' },
 
   sendForm(email, password) {
-    I.fillField(this.fields.email, email);
-    I.fillField(this.fields.password, password);
-    I.click(this.submitButton);
-  }
+    I.fillField(this.fields.email, email)
+    I.fillField(this.fields.password, password)
+    I.click(this.submitButton)
+  },
 }
 ```
 
 You can easily inject it to test by providing its name in test arguments:
 
 ```js
-Feature('CodeceptJS Demonstration');
+Feature('CodeceptJS Demonstration')
 
-Before(({ I }) => { // or Background
-  I.amOnPage('http://simple-form-bootstrap.plataformatec.com.br/documentation');
-});
+Before(({ I }) => {
+  // or Background
+  I.amOnPage('http://simple-form-bootstrap.plataformatec.com.br/documentation')
+})
 
 Scenario('test some forms', ({ I, docsPage }) => {
-  docsPage.sendForm('hello@world.com','123456');
-  I.see('User is valid');
-  I.dontSeeInCurrentUrl('/documentation');
-});
+  docsPage.sendForm('hello@world.com', '123456')
+  I.see('User is valid')
+  I.dontSeeInCurrentUrl('/documentation')
+})
 ```
 
 When using Typescript, replace `module.exports` with `export` for autocompletion.
 
-
 ## Contributing
 
- - ### [Contributing Guide](https://github.com/codeceptjs/CodeceptJS/blob/master/.github/CONTRIBUTING.md)
- - ### [Code of conduct](https://github.com/codeceptjs/CodeceptJS/blob/master/.github/CODE_OF_CONDUCT.md) 
-
+- ### [Contributing Guide](https://github.com/codeceptjs/CodeceptJS/blob/master/.github/CONTRIBUTING.md)
+- ### [Code of conduct](https://github.com/codeceptjs/CodeceptJS/blob/master/.github/CODE_OF_CONDUCT.md)
 
 ## Contributors
-
-
-
-
-
-
-
-
 
 <table>
   <tr>
@@ -478,7 +467,6 @@ When using Typescript, replace `module.exports` with `export` for autocompletion
   </a>
 </td></tr>
 </table>
-    
 
 ## License
 
