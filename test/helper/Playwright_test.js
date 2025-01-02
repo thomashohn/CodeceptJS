@@ -1081,9 +1081,36 @@ describe('Playwright', function () {
       I.see('Information');
     });
   });
-});
+  
+  describe('#clearCookie', () => {
+    it('should clear all cookies', async () => {
+      await I.amOnPage('/')
+
+      await I.setCookie({ name: 'test', value: 'test', url: siteUrl})
+      const cookiesBeforeClearing = await I.grabCookie()
+      assert.isAtLeast(cookiesBeforeClearing.length, 1)
+      await I.clearCookie()
+      const cookiesAfterClearing = await I.grabCookie()
+      assert.equal(cookiesAfterClearing.length, 0)
+    })
+
+    it('should clear individual cookie by name', async () => {
+      await I.amOnPage('/')
+      await I.setCookie({ name: 'test1', value: 'test1', url: siteUrl })
+      await I.setCookie({ name: 'test2', value: 'test2', url: siteUrl })
+
+      const cookiesBeforeRemovingSpecificCookie = await I.grabCookie()
+      // info: we use "atLeast" instead of "isEqual" here because other random cookies might be set by the page to test.
+      assert.isAtLeast(cookiesBeforeRemovingSpecificCookie.length, 2)
+      await I.clearCookie('test1')
+      const cookiesAfterRemovingSpecificCookie = await I.grabCookie()
+      assert.equal(cookiesAfterRemovingSpecificCookie.length, cookiesBeforeRemovingSpecificCookie.length - 1)
+    })
+  })
+})
 
 let remoteBrowser;
+
 async function createRemoteBrowser() {
   if (remoteBrowser) {
     await remoteBrowser.close();
