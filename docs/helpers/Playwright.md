@@ -551,6 +551,7 @@ I.clearCookie('test');
 
 #### Parameters
 
+*   `cookieName` &#x20;
 *   `cookie` **[string][9]?** (optional, `null` by default) cookie name 
 
 ### clearField
