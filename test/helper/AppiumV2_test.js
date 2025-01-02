@@ -1,4 +1,5 @@
 const chai = require('chai');
+const path = require('path');
 
 const expect = chai.expect;
 const assert = chai.assert;
