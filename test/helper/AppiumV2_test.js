@@ -2,6 +2,7 @@ const chai = require('chai')
 
 const expect = chai.expect
 const assert = chai.assert
+const path = require('path')
 
 let app
 const apk_path = 'storage:filename=selendroid-test-app-0.17.0.apk'
