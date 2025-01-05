@@ -5,14 +5,16 @@ import('chai').then(chai => {
 const Mocha = require('mocha/lib/mocha')
 const Suite = require('mocha/lib/suite')
 
-global.codeceptjs = require('../../lib')
-const makeUI = require('../../lib/ui')
+global.codeceptjs = require('../../../lib')
+const makeUI = require('../../../lib/mocha/ui')
+const container = require('../../../lib/container')
 
 describe('ui', () => {
   let suite
   let context
 
   beforeEach(() => {
+    container.clear()
     context = {}
     suite = new Suite('empty')
     makeUI(suite)
@@ -84,26 +86,6 @@ describe('ui', () => {
         return { browser: 'edge' }
       })
       expect('edge').eq(suiteConfig.suite.config.WebDriver.browser)
-    })
-
-    it('Feature can be skipped', () => {
-      suiteConfig = context.Feature.skip('skipped suite')
-      expect(suiteConfig.suite.pending).eq(true, 'Skipped Feature must be contain pending === true')
-      expect(suiteConfig.suite.opts.skipInfo.message).eq('Skipped due to "skip" on Feature.')
-      expect(suiteConfig.suite.opts.skipInfo.skipped).eq(true, 'Skip should be set on skipInfo')
-    })
-
-    it('Feature can be skipped via xFeature', () => {
-      suiteConfig = context.xFeature('skipped suite')
-      expect(suiteConfig.suite.pending).eq(true, 'Skipped Feature must be contain pending === true')
-      expect(suiteConfig.suite.opts.skipInfo.message).eq('Skipped due to "skip" on Feature.')
-      expect(suiteConfig.suite.opts.skipInfo.skipped).eq(true, 'Skip should be set on skipInfo')
-    })
-
-    it('Feature are not skipped by default', () => {
-      suiteConfig = context.Feature('not skipped suite')
-      expect(suiteConfig.suite.pending).eq(false, 'Feature must not contain pending === true')
-      // expect(suiteConfig.suite.opts, undefined, 'Features should have no skip info');
     })
 
     it('Feature can be skipped', () => {
