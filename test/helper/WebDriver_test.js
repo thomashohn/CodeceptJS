@@ -1298,7 +1298,7 @@ describe('WebDriver - Basic Authentication', () => {
 
   // local run passed ✔ should be authenticated (443ms)
   describe('open page : #amOnPage', () => {
-    it.skip('should be authenticated', async () => {
+    it('should be authenticated', async () => {
       await wd.amOnPage('/basic_auth')
       await wd.see('You entered admin as your password.')
     })
