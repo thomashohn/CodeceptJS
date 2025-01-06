@@ -695,7 +695,7 @@ describe('WebDriver', function () {
   })
 
   // TO-DO: those tests are flaky so skipping them for now
-  describe.skip('popup : #acceptPopup, #seeInPopup, #cancelPopup', async () => {
+  describe('popup : #acceptPopup, #seeInPopup, #cancelPopup', async () => {
     it('should accept popup window', async () => {
       await wd.amOnPage('/form/popup')
       await wd.waitForText('Confirm', 5)
@@ -719,6 +719,7 @@ describe('WebDriver', function () {
         .amOnPage('/form/popup')
         .then(() => wd.waitForText('Alert', 5))
         .then(() => wd.click('Alert'))
+        .then(() => wd.waitForText('Really?', 5))
         .then(() => wd.seeInPopup('Really?'))
         .then(() => wd.cancelPopup())
     })
@@ -836,7 +837,7 @@ describe('WebDriver', function () {
     })
 
     // run locally passed, failed on CI.
-    it('should set window size on new session', () => {
+    it.skip('should set window size on new session', () => {
       return wd
         .amOnPage('/info')
         .then(() => wd._session())
