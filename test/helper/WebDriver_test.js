@@ -52,6 +52,7 @@ describe('WebDriver', function () {
   beforeEach(async () => {
     webApiTests.init({ I: wd, siteUrl })
     this.wdBrowser = await wd._before()
+    this.wdBrowser.on('dialog', dialog => {})
     return this.wdBrowser
   })
 
@@ -717,9 +718,7 @@ describe('WebDriver', function () {
     it('should check text in popup', () => {
       return wd
         .amOnPage('/form/popup')
-        .then(() => wd.waitForText('Alert', 5))
         .then(() => wd.click('Alert'))
-        .then(() => wd.waitForText('Really?', 5))
         .then(() => wd.seeInPopup('Really?'))
         .then(() => wd.cancelPopup())
     })
