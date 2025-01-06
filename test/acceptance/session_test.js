@@ -7,11 +7,11 @@ Feature('Session')
 Scenario('simple session @WebDriverIO @Puppeteer @Playwright', ({ I }) => {
   I.amOnPage('/info')
   session('john', () => {
-    I.amOnPage('https://codecept.io/')
+    I.amOnPage('/login')
     I.dontSeeInCurrentUrl('/info')
-    I.see('CodeceptJS')
+    I.see('Email')
   })
-  I.dontSee('GitHub')
+  I.dontSee('Email')
   I.seeInCurrentUrl('/info')
 })
 
