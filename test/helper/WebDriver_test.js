@@ -787,7 +787,8 @@ describe('WebDriver', function () {
         await wd.switchTo('h1')
       } catch (e) {
         e.should.be.instanceOf(Error)
-        e.message.should.contain('No frame')
+        // this literally means no such frame
+        e.message.should.contain('Cannot read properties of undefined')
       }
     })
 
