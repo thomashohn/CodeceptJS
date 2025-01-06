@@ -695,24 +695,29 @@ describe('WebDriver', function () {
   })
 
   // TO-DO: those tests are flaky so skipping them for now
-  describe.skip('popup : #acceptPopup, #seeInPopup, #cancelPopup', async () => {
+  describe('popup : #acceptPopup, #seeInPopup, #cancelPopup', async () => {
     it('should accept popup window', async () => {
       await wd.amOnPage('/form/popup')
+      await wd.waitForText('Confirm', 5)
       await wd.click('Confirm')
       await wd.acceptPopup()
+      await wd.waitForElement({ css: '#result' }, 5)
       await wd.see('Yes', '#result')
     })
 
     it('should cancel popup', async () => {
       await wd.amOnPage('/form/popup')
+      await wd.waitForText('Confirm', 5)
       await wd.click('Confirm')
       await wd.cancelPopup()
+      await wd.waitForElement({ css: '#result' }, 5)
       await wd.see('No', '#result')
     })
 
     it('should check text in popup', () => {
       return wd
         .amOnPage('/form/popup')
+        .then(() => wd.waitForText('Alert', 5))
         .then(() => wd.click('Alert'))
         .then(() => wd.seeInPopup('Really?'))
         .then(() => wd.cancelPopup())
