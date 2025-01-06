@@ -198,7 +198,6 @@ describe('WebDriver', function () {
       await wd.seeInField('select2', 'see test three')
     })
 
-
     it('should return error when element has no value attribute', async () => {
       await wd.amOnPage('https://codecept.io/quickstart')
 
@@ -386,15 +385,9 @@ describe('WebDriver', function () {
     it('should grab the innerHTML for an element', async () => {
       await wd.amOnPage('/')
       const source = await wd.grabHTMLFrom('#area1')
-      assert.deepEqual(
-        source,
-        `
-    <a href="/form/file" qa-id="test" qa-link="test"> Test Link </a>
-`,
-      )
+      assert.deepEqual(source, '<a href="/form/file" qa-id="test" qa-link="test">Test Link</a>')
     })
   })
-
 
   describe('#seeTitleEquals', () => {
     it('should check that title is equal to provided one', async () => {
@@ -794,7 +787,7 @@ describe('WebDriver', function () {
         await wd.switchTo('h1')
       } catch (e) {
         e.should.be.instanceOf(Error)
-        e.message.should.contain('no such frame')
+        e.message.should.contain('No frame')
       }
     })
 
