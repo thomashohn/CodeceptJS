@@ -209,7 +209,7 @@ xScenario('should start firefox', async ({ I }) => {
   assert(isChrome)
 })
 
-Scenario('should return a value in @WebDriverIO @Puppeteer @Playwright', async ({ I }) => {
+Scenario('should return a value in @Puppeteer @Playwright', async ({ I }) => {
   I.amOnPage('/form/textarea')
   const val = await session('john', () => {
     I.amOnPage('/info')
@@ -220,7 +220,7 @@ Scenario('should return a value in @WebDriverIO @Puppeteer @Playwright', async (
   I.see('[description] => Information')
 })
 
-Scenario('should return a value @WebDriverIO @Puppeteer @Playwright in async', async ({ I }) => {
+Scenario('should return a value @Puppeteer @Playwright in async', async ({ I }) => {
   I.amOnPage('/form/textarea')
   const val = await session('john', async () => {
     I.amOnPage('/info')
