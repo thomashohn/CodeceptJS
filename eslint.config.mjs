@@ -79,6 +79,7 @@ export default [
       'prefer-const': 0,
       'no-extra-semi': 0,
       'max-classes-per-file': 0,
+      'no-return-await': 0,
     },
   },
 ]
