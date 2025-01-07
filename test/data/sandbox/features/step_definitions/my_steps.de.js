@@ -4,7 +4,7 @@ Given('ich habe ein Produkt mit einem Preis von {int}$ in meinem Warenkorb', pri
   I.addItem(parseInt(price, 10))
 })
 
-Given('der Rabatt für Bestellungen über $\{int} beträgt {int} %', (maxPrice, discount) => {
+Given('der Rabatt für Bestellungen über ${int} beträgt {int} %', (maxPrice, discount) => {
   I.haveDiscountForPrice(maxPrice, discount)
 })
 
