@@ -30,8 +30,8 @@ describe('Appium', function () {
         recordVideo: 'false',
         recordScreenshots: 'false',
         platformName: 'Android',
-        platformVersion: '6.0',
-        deviceName: 'Android Emulator',
+        platformVersion: '7.0',
+        deviceName: 'Android GoogleAPI Emulator',
         androidInstallTimeout: 90000,
         appWaitDuration: 300000,
       },
@@ -595,7 +595,7 @@ describe('Appium', function () {
         platform = 'android'
       })
       app.runOnAndroid({ platformVersion: '7.0' }, () => {
-        platform = 'android7'
+        platform = 'android'
       })
 
       assert.equal('android', platform)
